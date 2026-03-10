@@ -1,0 +1,19 @@
+/target
+
+# -------- OS cruft --------
+.DS_Store
+Thumbs.db
+
+# -------- Editor / IDE --------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# -------- DB -----------
+# Velr databases + SQLite sidecars
+*.velr
+*.velr-wal
+*.velr-shm
+*.velr-journal
