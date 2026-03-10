@@ -331,7 +331,7 @@ fn import_ticket_batches_smoke() -> Result<()> {
     let total_start = Instant::now();
 
     let open_start = Instant::now();
-    let db = Velr::open(Some("velr-tickets.db"))?;
+    let db = Velr::open(Some("velr-tickets.velr"))?;
     println!("open took: {:?}", open_start.elapsed());
 
     let import_start = Instant::now();
