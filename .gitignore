@@ -17,3 +17,7 @@ Thumbs.db
 *.velr-wal
 *.velr-shm
 *.velr-journal
+*.db
+*.db-wal
+*.db-shm
+*.db-journal

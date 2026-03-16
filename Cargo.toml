@@ -1,10 +1,27 @@
 [package]
-name = "velr-consumer"
+name = "velr-rust-examples"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+publish = false
 
 [dependencies]
 rand = "0.8"
-velr = { version = "0.1", features = ["arrow-ipc"] }
-arrow2 = { version = "0.18", default-features = false }
+velr = { version = "0.1.68", features = ["arrow-ipc"] }
+arrow2 = { version = "0.18", default-features = false, optional = true }
 
+[features]
+default = []
+arrow-ipc = ["dep:arrow2", "velr/arrow-ipc"]
+
+[[example]]
+name = "arrow_ipc"
+required-features = ["arrow-ipc"]
+
+[[example]]
+name = "arrow_chunked"
+required-features = ["arrow-ipc"]
+
+[[example]]
+name = "batch_import"
+required-features = ["arrow-ipc"]
