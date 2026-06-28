@@ -8,6 +8,7 @@ fn main() {
     println!("Core driver examples:");
     println!("  cargo run --example basic_open");
     println!("  cargo run --example basic_query");
+    println!("  cargo run --example query_parameters");
     println!("  cargo run --example file_backed");
     println!("  cargo run --example streaming_tables");
     println!("  cargo run --example transaction");
@@ -44,4 +45,9 @@ fn main() {
     println!("  cargo run --example arrow_ipc --features arrow-ipc");
     println!("  cargo run --example arrow_chunked --features arrow-ipc");
     println!("  cargo run --example batch_import --features arrow-ipc");
+    println!();
+
+    println!("Search examples:");
+    println!("  cargo run --example fulltext_search");
+    println!("  cargo run --example vector_embeddings_fastembed --features embeddings");
 }

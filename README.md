@@ -10,6 +10,7 @@ Examples in this repository cover:
 
 - opening in-memory and file-backed databases
 - creating and querying graph data
+- binding openCypher query parameters
 - reading result tables row by row
 - handling typed cell values
 - streaming multiple result tables
@@ -18,6 +19,8 @@ Examples in this repository cover:
 - working with openCypher concepts such as `MATCH`, `WHERE`, `MERGE`, `WITH`, paths, and variable-length paths
 - modeling real-world graph use cases such as knowledge graphs, fraud detection, access control, org charts, and ticket dependencies
 - importing data with Arrow and `UNWIND BIND(...)`
+- creating full-text indexes and querying them with Neo4j-compatible `CALL` syntax
+- registering a vector embedder and querying vector indexes with FastEmbed
 
 ## Getting started
 
@@ -35,6 +38,13 @@ Some examples require the `arrow-ipc` feature:
 cargo run --example batch_import --features arrow-ipc
 ```
 
+The FastEmbed vector example requires the `embeddings` feature and downloads a
+small embedding model on first run:
+
+```bash
+cargo run --example vector_embeddings_fastembed --features embeddings
+```
+
 ## Example layout
 
 Examples live in the `examples/` directory.
@@ -43,6 +53,7 @@ Examples live in the `examples/` directory.
 
 * `basic_open.rs`
 * `basic_query.rs`
+* `query_parameters.rs`
 * `file_backed.rs`
 * `streaming_tables.rs`
 * `transaction.rs`
@@ -79,6 +90,11 @@ Examples live in the `examples/` directory.
 * `arrow_ipc.rs`
 * `arrow_chunked.rs`
 * `batch_import.rs`
+
+### Search examples
+
+* `fulltext_search.rs`
+* `vector_embeddings_fastembed.rs`
 
 ## Minimal example
 
